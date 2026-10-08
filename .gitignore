@@ -1,0 +1,27 @@
+# Build artifacts and generated files
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+DartConfiguration.tcl
+Makefile
+CMakeFiles/
+*.o
+*.o.d
+UpgradeLog.htm
+valgrind_out.txt
+
+# Ignore the build directory in picotls
+picotls/CMakeFiles/
+picotls/CMakeCache.txt
+picotls/cmake_install.cmake
+picotls/Makefile
+picotls/CTestTestfile.cmake
+picotls/DartConfiguration.tcl
+
+# Ignore the build directory in picotls_arm
+picotls_arm/CMakeFiles/
+picotls_arm/CMakeCache.txt
+picotls_arm/cmake_install.cmake
+picotls_arm/Makefile
+picotls_arm/CTestTestfile.cmake
+picotls_arm/DartConfiguration.tcl

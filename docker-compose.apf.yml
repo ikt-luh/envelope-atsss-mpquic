@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  atsss-apf:
+    image: atsss:latest
+    build: .
+    container_name: atsss-apf
+    command: uvicorn apf:app --host ${APF_IP} --port 8100
+    env_file:
+      - .env
+    network_mode: host
+    privileged: true
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /tmp:/tmp

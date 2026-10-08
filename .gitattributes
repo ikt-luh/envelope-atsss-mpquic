@@ -1,0 +1,29 @@
+# Static libraries
+*.a filter=lfs diff=lfs merge=lfs -text
+
+# Binaries
+/picoquic/pico_baton filter=lfs diff=lfs merge=lfs -text
+/picoquic/picohttp_ct filter=lfs diff=lfs merge=lfs -text
+/picoquic/picoquic_ct filter=lfs diff=lfs merge=lfs -text
+/picoquic/picoquicdemo filter=lfs diff=lfs merge=lfs -text
+/picoquic/picoquic_sample filter=lfs diff=lfs merge=lfs -text
+/picoquic/thread_test filter=lfs diff=lfs merge=lfs -text
+/picoquic/picolog_t filter=lfs diff=lfs merge=lfs -text
+
+/picoquic_arm/pico_baton filter=lfs diff=lfs merge=lfs -text
+/picoquic_arm/picohttp_ct filter=lfs diff=lfs merge=lfs -text
+/picoquic_arm/picoquic_ct filter=lfs diff=lfs merge=lfs -text
+/picoquic_arm/picoquic_sample filter=lfs diff=lfs merge=lfs -text
+/picoquic_arm/picolog_t filter=lfs diff=lfs merge=lfs -text
+
+/picotls/cli filter=lfs diff=lfs merge=lfs -text
+/picotls/ptlsbench filter=lfs diff=lfs merge=lfs -text
+/picotls/test-fusion.t filter=lfs diff=lfs merge=lfs -text
+/picotls/test-minicrypto.t filter=lfs diff=lfs merge=lfs -text
+/picotls/test-openssl.t filter=lfs diff=lfs merge=lfs -text
+
+/picotls_arm/cli filter=lfs diff=lfs merge=lfs -text
+/picotls_arm/ptlsbench filter=lfs diff=lfs merge=lfs -text
+/picotls_arm/test-fusion.t filter=lfs diff=lfs merge=lfs -text
+/picotls_arm/test-minicrypto.t filter=lfs diff=lfs merge=lfs -text
+/picotls_arm/test-openssl.t filter=lfs diff=lfs merge=lfs -text
