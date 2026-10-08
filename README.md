@@ -22,17 +22,18 @@ flowchart LR
         APF
     end
 ```
-AUE (client-side component) sits at the sending end of the pipeline. It receives input data (via FIFO) and is responsible for steering that traffic across multiple network paths using MPQUIC.  
+**AUE** (client-side component) sits at the sending end of the pipeline. It receives input data (via FIFO) and is responsible for steering that traffic across multiple network paths using MPQUIC.  
 
-ANE (server-side component) sits at the receiving end. It terminates the MPQUIC connections coming from AUE, and forwards the resulting traffic onward to a downstream Server using its own picoquic instance.  
+**ANE** (server-side component) sits at the receiving end. It terminates the MPQUIC connections coming from AUE, and forwards the resulting traffic onward to a downstream Server using its own picoquic instance.  
 
 AUE and ANE communicate over two independent named interfaces (Iface 1 and Iface 2) - traffic is split or steered across both paths simultaneously.  
 
-This MPQUIC implementation currently supports 3 modes:
- * Load Balancing - path is selected according to a percentage ratio provided by RL agent, based on network measurements obtained from PMF.
- * minRTT - path is selected according to the RTT available paths.
- * Selective Duplication - data is duplicated and sent on both available paths. Duplicate data received by ANE is silently discarded.
+## Modes
 
+This MPQUIC implementation currently supports three modes:
+ * minRTT - the path with the lowest RTT among the available paths is selected.
+ * Selective Duplication - data is duplicated and sent over both available paths. Duplicate data received by ANE is silently discarded.
+ * Load Balancing - traffic is distributed across the available paths according to a configurable ratio, which can be updated at runtime. An RL agent for traffic steering in the load balancing mode is available in a separate [repository](https://github.com/ikt-luh/envelope-atsss-rl).
 
 ## Project Structure
 
