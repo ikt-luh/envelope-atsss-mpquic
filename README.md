@@ -53,11 +53,10 @@ This MPQUIC implementation currently supports three modes:
 > It is not possible to run multiple instances of MPQUIC in parallel, as they would share the same interfaces.
 > **It is necessary that RL agent is up and running IF you're going to use the load-balancing mode**
 
-1. Ensure that fifo pipes exist. Both input and output. You can create temporary ones with 
+1. Run the first time setup script
    ```bash
-   mkfifo /tmp/fifo_input && mkfifo /tmp/fifo_output
+   bash setup.sh
    ```
-   or by running the ```recompile.sh``` script. Do this for both AUE and Server.
 2. Check and adjust the .env variables before starting any docker containers. An example .env file is provided as `.env.example`. Pay special attention to:
    - `ATSSS_IFACES`
    - IP variables
