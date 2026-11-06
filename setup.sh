@@ -1,6 +1,6 @@
 #!/bin/bash
 
-loc=pwd
+loc=$(pwd)
 arch=$(uname -i)
 if  [[ $arch == arm* ]] || [[ $arch = aarch64 ]]; then
         echo "ARM architecture detected, compiling ARM pico libraries"
